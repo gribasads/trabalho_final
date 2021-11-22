@@ -9,7 +9,7 @@ require_once 'construtor.php';
 
 
     $user = new Usuario();
-
+    setcookie("nome", $login);
     $func=$user->Logar($login,$pass);
     echo  "======>".$func;
 if(empty($func)){

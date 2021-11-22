@@ -19,7 +19,10 @@ if ($resultado->num_rows > 0) {
     }
 }    
 ?>
-        <form name="acesso" action="pizza.php" method="get">
+
+<body>
+    
+<form name="acesso" action="pizza.php" method="get">
             id<input type="text" name="id"      value="<?php echo $id?>"   > </input>    
             <br>
             sabor<input type="text" name="sabor"  value="<?php echo $sabor?>"> </input>    
@@ -79,3 +82,10 @@ if ($resultado->num_rows > 0) {
 
 
 </form>
+
+<form action="index.html">
+  <input type="submit" value="voltar"/>
+</form>
+
+</body>
+       

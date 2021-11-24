@@ -1,0 +1,7 @@
+NOTA DO PEDIDO
+
+Sabor da pizza:          
+Valor     :              
+quantidade:              
+
+Valor Total    : 0

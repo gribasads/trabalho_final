@@ -8,9 +8,9 @@ class Pedido
 
       // dados do pedido: 
       fputs($nota , "NOTA DO PEDIDO\n\n");
-      fputs($nota , "Data           : {$sabor}\n");
-      fputs($nota , "Atendente      : {$valor}\n");
-      fputs($nota , "Nome do Cliente: {$quantidade}\n");
+      fputs($nota , "Sabor da pizza:          {$sabor}\n");
+      fputs($nota , "Valor     :              {$valor}\n");
+      fputs($nota , "quantidade:              {$quantidade}\n");
      
 
       fputs($nota , "\nValor Total    : {$total}\n");

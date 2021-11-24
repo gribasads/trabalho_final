@@ -3,13 +3,16 @@ require_once 'functions.php';
 require_once 'construtor.php';
 
 
-  $quant=$_POST["quantidade"];
+  $quant=@$_POST["quantidade"];
   $brinde=0;
   $bonus=0;
+  $tipo=$_POST["tipo"];
   //calcular($quantCL,$quantPP,$quantPT);
- 
-//   $pedido=new Pedido();
-//   $pedido->criarNota($sabor,$quant,$valor);
+   
+ if($tipo=="gerar"){
+   $pedido=new Pedido();
+   $pedido->criarNota($sabor,$quant,$valor);
+ }
   $id = $_POST['id'];
 
 
@@ -66,6 +69,7 @@ require_once 'construtor.php';
             <br>
             quantidade<input type="number" name="quantidade" > </input> 
            <br>
+           <button type="submit" name="tipo" value="gerar">Gerar nota</button>
            <input type="submit" name="envia">
           <table border="1">
           <thead>

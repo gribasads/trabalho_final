@@ -1,7 +1,7 @@
 NOTA DO PEDIDO
 
-Sabor da pizza:          
-Valor     :              
-quantidade:              
+Sabor da pizza:          frango
+Valor     :              18.75
+quantidade:              4
 
-Valor Total    : 0
+Valor Total    : 3

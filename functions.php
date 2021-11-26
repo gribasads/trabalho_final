@@ -4,7 +4,6 @@ require_once 'construtor.php';
 
 
 
-
 function calcular($quantCL,$quantPP,$quantPT){
     $entrega=0;
     //calabreza

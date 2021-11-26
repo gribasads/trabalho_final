@@ -8,16 +8,36 @@ $sql = "select  * from gustavo_pizza where id=$id  ";
 
 $resultado = $conexao->query($sql);
 if ($resultado->num_rows > 0) {
-    
+
 
     while ($coluna = $resultado->fetch_assoc()) {
         $id    = $coluna['id'];
         $sabor  = $coluna['sabor'];
         $valor = $coluna['valor'];
-        
-        
+
+
     }
-}    
+}
+
+
+if(isset($_FILES['arquivo']))
+{
+
+    $arquivo = fopen("import.txt", 'r');
+
+
+    while (!feof($arquivo)) {
+        $linha = explode(";", fgets($arquivo, 1024));
+
+        $sql = "INSERT INTO gustavo_pizza(sabor,valor) VALUES('{$linha[0]}','{$linha[1]}');";
+        if ($conexao->query($sql) === TRUE) {
+        } else {
+            echo "Erro:" . "$sql" . "<br>" . $conexao->error;
+        }
+    }
+
+    fclose($arquivo);
+}
 ?>
 
 <body>
@@ -87,10 +107,13 @@ if ($resultado->num_rows > 0) {
   <input type="submit" value="voltar"/>
 </form>
 
-<!-- <form action="upload-exemplo.php" method="POST" enctype="multipart/form-data">
-   <input type="file" name="arquivo">
-   <input type="submit" value="Enviar">
-</form> -->
+
+    <form action="adm.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="arquivo">
+        <input type="submit" value="Enviar">
+    </form>
+
+
 
 </body>
        

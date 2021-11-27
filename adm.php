@@ -23,7 +23,7 @@ if ($resultado->num_rows > 0) {
 if(isset($_FILES['arquivo']))
 {
 
-    $arquivo = fopen("import.txt", 'r');
+    $arquivo = fopen("arquivos/import.txt", 'r');
 
 
     while (!feof($arquivo)) {

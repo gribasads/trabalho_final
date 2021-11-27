@@ -1,7 +1,8 @@
 NOTA DO PEDIDO
 
-Sabor da pizza:          frango
-Valor     :              18.75
-quantidade:              4
+Sabor da pizza:          calabresa
+Valor     :              19
+quantidade:              5
+Adicionar coca-cola como brinde
 
 Valor Total    : 3

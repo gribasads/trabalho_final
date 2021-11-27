@@ -12,7 +12,9 @@ class Pedido
       fputs($nota , "Valor     :              {$valor}\n");
       fputs($nota , "quantidade:              {$quantidade}\n");
      
-
+      if($quantidade>=5){
+        fputs($nota , "Adicionar coca-cola como brinde\n");
+      }
       fputs($nota , "\nValor Total    : {$total}\n");
 
       fclose($nota); 

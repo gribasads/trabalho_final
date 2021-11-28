@@ -17,8 +17,9 @@ require_once 'construtor.php';
   $sabor  = $_GET['sabor'];
   $valor = $_GET['valor'];
   $quant = $_GET['quantidade'];
+  $total = $valor * $quant;
    $pedido=new Pedido();
-   $pedido->criarNota($sabor,$valor,$quant);
+   $pedido->criarNota($sabor,$valor,$quant,$total);
    
  }
  

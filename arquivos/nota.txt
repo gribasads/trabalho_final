@@ -4,6 +4,6 @@ Sabor da pizza:          calabresa
 Valor     :              19
 quantidade:               15
 Adicionar coca-cola como brinde
-A comissão será do seu atendente será de:  14.25 muito obrigado pela contribuição!!!
+A comissão do seu atendente será de:  14.25 muito obrigado pela contribuição!!!
 
 Valor Total    : 285

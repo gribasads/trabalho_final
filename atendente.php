@@ -83,7 +83,7 @@ require_once 'construtor.php';
            <br>
            <button type="submit" name="tipo" value="gerar">Gerar nota</button>
            
-           <input type="submit" name="envia">
+           
           <table border="1">
           <thead>
                     <tr>
@@ -104,7 +104,7 @@ require_once 'construtor.php';
             echo "Registro encontrado";
 
             while ($coluna = $resultado->fetch_assoc()) {
-                echo $coluna["id"] . "-" . $coluna["sabor"] . "-" . $coluna["valor"] . "<br>";
+               
                 echo "<tr>";
                 $id = $coluna['id'];
                 echo "<td><a href='atendente.php?id=$id'>" . $coluna['id'] . "</td>";

@@ -81,7 +81,7 @@ require_once 'construtor.php';
             <br>
             quantidade<input type="number" name="quantidade" > </input> 
            <br>
-           <button type="submit" name="tipo" value="gerar">Gerar nota</button>
+           <button type="submit" name="tipo" value="gerar">Gerar Nota</button>
            
            
           <table border="1">

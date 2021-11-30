@@ -1,7 +1,7 @@
 <?php 
-require_once 'functions.php';
-require_once 'construtor.php';
 
+require_once 'construtor.php';
+error_reporting(0);
 
   $quant=@$_POST["quantidade"];
   $brinde=0;
@@ -57,7 +57,7 @@ require_once 'construtor.php';
        echo"<br>";
        echo "total das pizza";
        echo "<br>";
-      // echo number_format($_SESSION['valorTotal'],2,',',);
+       echo number_format($total,2,",",".");
        ?></h2>
        <h3><?php if($quant >= 5){
     echo"<br>";
@@ -66,10 +66,11 @@ require_once 'construtor.php';
 ?></h3>
 <h3>
     <?php
-  //  bonus($brinde,$bonus);
-    echo "<br>";
-  //  echo "O valor do seu bonus sera de ".number_format($_SESSION['bonus'],2,',',);;
-
+  if($quant>=15){
+    $brinde = $total* 0.05;
+    echo"A sua comissão será de:  ";
+    echo number_format($brinde,2,",",".");
+  }
     ?>
 </h3>
 
@@ -81,7 +82,7 @@ require_once 'construtor.php';
             <br>
             quantidade<input type="number" name="quantidade" > </input> 
            <br>
-           <button type="submit" name="tipo" value="gerar">Gerar Nota</button>
+           <button type="submit" name="tipo" value="gerar" download>Gerar Nota</button>
            
            
           <table border="1">

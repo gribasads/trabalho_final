@@ -1,5 +1,6 @@
 <?php
 require_once 'conexao.php';
+error_reporting(0);
 
 $id = $_GET['id'];
 
@@ -39,7 +40,7 @@ if(isset($_FILES['arquivo']))
     fclose($arquivo);
 }
 ?>
-
+ <h1>Para adicionar um sabor, use o arquivo import na raiz do projeto, ou preencha os campos sem o id</h1>
 <body>
     
 <form name="acesso" action="pizza.php" method="get">
@@ -53,8 +54,9 @@ if(isset($_FILES['arquivo']))
             
             <input type="submit" name="tipo" value="incluir"></input>   
             <input type="submit" name="tipo" value="editar"></input>   
-            <input type="submit" name="tipo" value="listar"></input>   
-
+             
+    <br>
+   
 
             <table border="1">
                 <thead>

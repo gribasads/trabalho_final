@@ -1,10 +1,12 @@
 NOTA DO PEDIDO
 
-Sabor da pizza:          pepperoni
-Valor     :              21.89
+Sabor da pizza:          calabresa
+Valor     :              19
 quantidade:               15
 Adicionar coca-cola como brinde
-A comissão do seu atendente será de:  16.4175 muito obrigado pela contribuição!!!
-entrega: 2.58 imposto:     0.0225
+A comissão do seu atendente será de:  14.25 muito obrigado pela contribuição!!!
+entrega: 0.7 imposto:     0.75
 
-Valor Total (pepperoni) : 7.445925
+Valor Total (Calabresa) : 214.275
+
+Valor Total    : 285

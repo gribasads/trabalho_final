@@ -11,7 +11,7 @@ if($conexao->connect_error)
     die("Falha de conecao".$conexao->connect_error);
     
 }else{
-    echo "Conectado!";
+    // echo "Conectado!";
     
 }
 

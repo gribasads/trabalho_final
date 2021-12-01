@@ -83,7 +83,7 @@ error_reporting(0);
             <br>
             quantidade<input type="number" name="quantidade" > </input> 
            <br>
-           <button type="submit" name="tipo" value="gerar" download>Gerar Nota</button>
+           <button type="submit" name="tipo" value="gerar" >Gerar Nota</button>
            
            
           <table border="1">

@@ -20,26 +20,26 @@ class Usuario {
         $this->senha = $senha;
     }
 
-    function logar($login, $senha) // loga o usuário
+    function logar($login, $senha) 
     {
 
         $select_login =
             "SELECT * FROM gustavo_usuarios 
-         WHERE gustavo_usuarios.user = '{$login}' AND gustavo_usuarios.senha = '{$senha}'"; //seleciona os dados do usuário para o login
+         WHERE gustavo_usuarios.user = '{$login}' AND gustavo_usuarios.senha = '{$senha}'"; 
         echo $select_login;
         $sql = new queries();
-        $res_login = $sql->executar($select_login); // roda o select de login
+        $res_login = $sql->executar($select_login); 
 
-        if ($res_login->num_rows > 0) { // confere se alguma linha foi encontrada
+        if ($res_login->num_rows > 0) { 
 
-            while ($coluna = $res_login->fetch_assoc()) {   // confere linha a linha do resultado do sql de login
+            while ($coluna = $res_login->fetch_assoc()) {   
 
-                return $coluna['user']; //retorna o nome do usuario
+                return $coluna['user']; 
 
             }
         } else {
 
-            return 0; // retorna que nenhum usuário foi encontrado
+            return 0;
 
         }
     }

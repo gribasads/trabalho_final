@@ -1,7 +1,8 @@
 NOTA DO PEDIDO
 
-Sabor da pizza:          frango
-Valor     :              23
-quantidade:               2
+Sabor da pizza:          portuguesa
+Valor     :              18.65
+quantidade:               1
+entrega: 3.21 imposto:     0.1865
 
-Valor Total    : 46
+Valor Total (Portuguesa) : 22.0465

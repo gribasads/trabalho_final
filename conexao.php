@@ -10,9 +10,6 @@ if($conexao->connect_error)
     //echo "Falha na conexao";
     die("Falha de conecao".$conexao->connect_error);
     
-}else{
-    // echo "Conectado!";
-    
 }
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao.php';
+require_once 'construtor.php';
 error_reporting(0);
 
 $id = $_GET['id'];

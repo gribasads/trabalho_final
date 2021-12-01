@@ -1,12 +1,7 @@
 NOTA DO PEDIDO
 
-Sabor da pizza:          calabresa
-Valor     :              19
-quantidade:               15
-Adicionar coca-cola como brinde
-A comissão do seu atendente será de:  14.25 muito obrigado pela contribuição!!!
-entrega: 0.7 imposto:     0.75
+Sabor da pizza:          frango
+Valor     :              23
+quantidade:               2
 
-Valor Total (Calabresa) : 214.275
-
-Valor Total    : 285
+Valor Total    : 46

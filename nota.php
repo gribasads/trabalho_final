@@ -6,7 +6,7 @@ class Pedido
      $total=$totalNota;
      $entrega=0;
      $imposto=0;
-      $nota  = fopen("arquivos/nota.txt",'w'); 
+    $nota  = fopen("arquivos/nota.txt",'w'); 
 
     
       fputs($nota , "NOTA DO PEDIDO\n\n");
@@ -22,33 +22,32 @@ class Pedido
          fputs($nota , "A comissão do seu atendente será de:  {$brinde} muito obrigado pela contribuição!!!\n");
        }
 
-       if($sabor ==="calabresa")
-       {
-         $entrega = 0.7;
-         $imposto = 0.75;
-        $totalCala = ($total + $entrega) * $imposto;
-        fputs($nota , "entrega: {$entrega} imposto:     {$imposto}\n");
-        fputs($nota , "\nValor Total (Calabresa) : {$totalCala}\n");
-       }
-       if($sabor ==="portuguesa")
-       {
-         $entrega = 3.21;
-         $imposto = 0.1;
-        $totalCala = ($total + $entrega) * $imposto;
-        fputs($nota , "entrega: {$entrega} imposto:     {$imposto}\n");
-        fputs($nota , "\nValor Total (Portuguesa) : {$totalCala}\n");
-       }
-       if($sabor ==="pepperoni")
-       {
-         $entrega = 2.58;
-         $imposto = 0.0225;
-        $totalPeppe = ($total + $entrega) * $imposto;
-        fputs($nota , "entrega: {$entrega} imposto:     {$imposto}\n");
-        fputs($nota , "\nValor Total (pepperoni) : {$totalPeppe}\n");
-       }else{
+       switch ($sabor) {
+         case 'calabresa':
+          $entrega = 0.75;
+          $issq =  0.07 * $total;
+         $totalCala = ($total + $entrega) + $issq;
+         number_format($totalCala,2);
+         fputs($nota , "entrega: {$entrega} imposto:     {$issq}\n");
+         fputs($nota , "\nValor Total (Calabresa) : {$totalCala}\n");
+           break;
+         case 'portuguesa':
+          $entrega = 3.21;
+          $imposto = 0.01 * $total;
+         $totalPt = ($total + $entrega) + $imposto;
+         fputs($nota , "entrega: {$entrega} imposto:     {$imposto}\n");
+         fputs($nota , "\nValor Total (Portuguesa) : {$totalPt}\n");
+         break;
+          case 'pepperoni':
+            $entrega = 2.58;
+            $imposto = 0.025 * $total;
+           $totalPeppe = ($total + $entrega) + $imposto;
+           fputs($nota , "entrega: {$entrega} imposto:     {$imposto}\n");
+           fputs($nota , "\nValor Total (pepperoni) : {$totalPeppe}\n");
+           break;
+           default: fputs($nota , "\nValor Total    : {$total}\n"); break;
 
-         fputs($nota , "\nValor Total    : {$total}\n");
-       }
+          }
 
 
       fclose($nota); 

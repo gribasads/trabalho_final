@@ -20,6 +20,7 @@ error_reporting(0);
   $total = $valor * $quant;
    $pedido=new Pedido();
    $pedido->criarNota($sabor,$valor,$quant,$total);
+   echo "<a href='arquivos/nota.txt' download>Baixar nota</a>";
    
  }
  
